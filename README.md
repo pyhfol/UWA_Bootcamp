@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Network Topology](Images/unit13_finaltopology.png)
+![Network Topology](Diagrams/unit13_finaltopology.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above or select portions of the filebeat_pb.yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -61,7 +61,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker PS Post ELK Install](Images/docker_ps.png)
+![Docker PS Post ELK Install](Diagrams/docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -98,4 +98,4 @@ SSH into the control node and follow the steps below:
 	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
 5. $ ansible-playbook /etc/ansible/roles/filebeat_pb.yml
 6. The process shjould complete and diplay similar to the below:
-![Successful FileBeat Playbook](Images/filebeat_pb.png)
+![Successful FileBeat Playbook](Diagrams/filebeat_pb.png)

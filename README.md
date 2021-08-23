@@ -97,5 +97,5 @@ SSH into the control node and follow the steps below:
 	10.0.0.5 ansible_python_interpreter=/usr/bin/python3
 	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
 5. $ ansible-playbook /etc/ansible/roles/filebeat_pb.yml
-6. The process shjould complete and diplay similar to the below:
+6. The process should complete and diplay similar to the below:
 ![Successful FileBeat Playbook](Diagrams/filebeat_pb.png)

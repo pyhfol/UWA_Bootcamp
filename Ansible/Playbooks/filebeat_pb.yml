@@ -11,7 +11,7 @@
 
     - name: Copy FileBeat Config
       copy:
-        src: /etc/ansible/filebeat_config.yml
+        src: /etc/ansible/filebeat-config.yml
         dest: /etc/filebeat/filebeat.yml
 
     - name: FileBeat Enable

@@ -11,7 +11,7 @@
 
     - name: Copy MetricBeat Config
       copy:
-        src: /etc/ansible/metricbeat_config.yml
+        src: /etc/ansible/metricbeat-config.yml
         dest: /etc/metricbeat/metricbeat.yml
 
     - name: MetricBeat Enable

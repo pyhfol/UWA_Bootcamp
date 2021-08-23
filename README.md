@@ -89,13 +89,13 @@ SSH into the control node and follow the steps below:
 
 ### Step by step command line instruction
 1. Shell into your Ansible instance.
-2. $ curl https://github.com/pyhfol/UWA_Bootcamp/blob/main/Ansible/Playbooks/filebeat_pb.yml > /etc/ansible/roles/filebeat_pb.yml
-3. $ curl https://github.com/pyhfol/UWA_Bootcamp/blob/main/Ansible/Playbooks/Config%20Files/filebeat-config.yml > /etc/ansible/filebeat-config.yml
-3. $ nano /etc/ansible/hosts
+2. 'curl https://github.com/pyhfol/UWA_Bootcamp/blob/main/Ansible/Playbooks/filebeat_pb.yml > /etc/ansible/roles/filebeat_pb.yml'
+3. 'curl https://github.com/pyhfol/UWA_Bootcamp/blob/main/Ansible/Playbooks/Config%20Files/filebeat-config.yml > /etc/ansible/filebeat-config.yml'
+3. 'nano /etc/ansible/hosts'
 4. Add hosts and python suffix as demonstrated, then save and exit nano:
 	[webservers]
 	10.0.0.5 ansible_python_interpreter=/usr/bin/python3
 	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-5. $ ansible-playbook /etc/ansible/roles/filebeat_pb.yml
+5. 'ansible-playbook /etc/ansible/roles/filebeat_pb.yml'
 6. The process should complete and diplay similar to the below:
 ![Successful FileBeat Playbook](Diagrams/filebeat_pb.png)

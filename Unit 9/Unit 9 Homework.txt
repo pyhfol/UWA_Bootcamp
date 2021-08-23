@@ -1,0 +1,97 @@
+>>------>>
+Mission 1
+>>------>>
+
+The mail servers for starwars.com are:
+
+Non-authoritative answer:
+starwars.com    MX preference = 5, mail exchanger = alt1.aspx.l.google.com
+starwars.com    MX preference = 5, mail exchanger = alt2.aspmx.l.google.com
+starwars.com    MX preference = 10, mail exchanger = aspmx3.googlemail.com
+starwars.com    MX preference = 10, mail exchanger = aspmx2.googlemail.com
+starwars.com    MX preference = 1, mail exchanger = aspmx.l.google.com
+
+The resistance mail servers are not listed as MX servers for starwars.com
+
+The correct entries would be
+starwars.com    MX preference = 1, mail exchanger = asltx.1.google.com
+starwars.com    MX preference = 2, mail exchanger = asltx.2.google.com
+
+
+>>------>>
+Mission 2
+>>------>>
+
+The SPF record for theforce.net is:
+
+v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215
+
+The Force's mail server is not included in the SPF as a permitted server and the all value is not set, thereby their emails are treated as spam.
+
+The correct SPF record would be:
+
+v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215 ipv4:45.23.176.21
+
+
+>>------>>
+Mission 3
+>>------>>
+
+nslookup -type=cname www.theforce.net
+Server:  localhost
+Address:  10.1.1.1
+
+Non-authoritative answer:
+www.theforce.net        canonical name = theforce.net
+
+There is no CNAME record defining resistance.theforce.net. If there was the record would show:
+
+resistance.theforce.net		canonical name = theforce.net
+
+
+>>------>>
+Mission 4
+>>------>>
+
+The current NS records for princessleia.site are:
+
+nslookup -type=ns princessleia.site
+Server:  localhost
+Address:  10.1.1.1
+
+Non-authoritative answer:
+princessleia.site       nameserver = ns25.domaincontrol.com
+princessleia.site       nameserver = ns26.domaincontrol.com
+
+ns25.domaincontrol.com  internet address = 97.74.102.13
+ns25.domaincontrol.com  AAAA IPv6 address = 2603:5:2161::d
+ns26.domaincontrol.com  internet address = 173.201.70.13
+ns26.domaincontrol.com  AAAA IPv6 address = 2603:5:2261::d
+
+We would need to replace the second existing nameserver record with:
+
+princessleia.site       nameserver = ns2.galaxybackup.com
+
+
+>>------>>
+Mission 5
+>>------>>
+
+The shortest path in both hops and cost is:
+Batuu > D C G O R Q T V > Jedha = 23
+
+
+>>------>>
+Mission 6
+>>------>>
+
+IP | MAC:
+172.16.0.101 | 00:13:ce:55:98:ef
+172.16.0.1 | 00:0f:66:e3:e4:01
+
+
+>>------>>
+Mission 7
+>>------>>
+
+See attachment
